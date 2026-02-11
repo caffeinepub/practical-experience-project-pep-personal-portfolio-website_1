@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a multi-page personal portfolio website for Coding Class 10 (PEP), for Vedika Pawar (web developer), using HTML & CSS, including intro, education, skills, image gallery, contact form, and styled layout; ensure no default/template branding like “Caffeine AI app” appears.",
+  "architectural_notes": [
+    "Static HTML & CSS multi-page site (no framework specified)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-replace-all-placeholder-identity-content-e-g-alex-johnson-across-the-portfolio-website-with-vedika-pawar-s-portfolio-identity-explicitly-describing-her-as-a-web-developer-with-30-years-of-experience",
+      "title": "Replace all placeholder identity content (e.g., “Alex Johnson”) across the portfolio website with Vedika Pawar’s portfolio identity, explicitly describing her as a Web Developer with 30 years of experience.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-template-platform-branding-so-the-site-does-not-show-caffeine-ai-or-caffeine-ai-app-anywhere-in-the-ui-including-the-footer-link",
+      "title": "Remove all template/platform branding so the site does not show “caffeine.ai” (or “Caffeine AI app”) anywhere in the UI, including the footer link.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-header-branding-logo-brand-text-to-reflect-vedika-pawar-s-portfolio-e-g-vedika-pawar-or-vedika-pawar-portfolio-while-keeping-existing-navigation-items-and-routes-unchanged",
+      "title": "Update the site header branding (logo/brand text) to reflect Vedika Pawar’s portfolio (e.g., “Vedika Pawar” or “Vedika Pawar Portfolio”) while keeping existing navigation items and routes unchanged.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-website-aligned-with-the-pep-class-10-project-brief-by-ensuring-the-content-clearly-covers-introduction-education-details-skills-list-image-gallery-and-a-working-contact-form-with-a-simple-basic-presentation",
+      "title": "Keep the website aligned with the PEP Class 10 project brief by ensuring the content clearly covers: introduction, education details, skills list, image gallery, and a working contact form, with a simple, basic presentation.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a multi-page personal portfolio website (HTML & CSS) for Vedika Pawar (web developer) with intro, education, skills, image gallery, contact form, and styled layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Ensure site branding uses Vedika Pawar name (no Alex) and remove/hide any template branding like “Caffeine AI app” so it looks self-made",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Practical Experience Project (PEP)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

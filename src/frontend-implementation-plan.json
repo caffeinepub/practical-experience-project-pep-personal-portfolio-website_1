@@ -1,0 +1,101 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Personalize portfolio for Vedika Pawar and remove template branding",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Replace all placeholder identity content with Vedika Pawar and describe her as a Web Developer with 30 years of experience.",
+      "acceptanceCriteria": [
+        "Home/About hero heading no longer contains “Alex Johnson” and instead shows “Vedika Pawar”.",
+        "Home/About subtitle/intro text clearly states “Web Developer” and mentions “30 years of experience” in natural English.",
+        "Contact page contact info (email/phone/location) no longer uses alex.johnson@example.com or other Alex placeholders.",
+        "No page renders the name “Alex” anywhere in visible text."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/portfolioIdentity.ts",
+          "operation": "create",
+          "description": "Create a single source of truth for portfolio identity text (name: Vedika Pawar; role: Web Developer; experience: 30 years; contact info) so pages/components can avoid lingering placeholder content."
+        },
+        {
+          "path": "frontend/src/pages/HomeAbout.tsx",
+          "operation": "modify",
+          "description": "Replace all Alex Johnson/graduate placeholder hero + about copy with Vedika Pawar identity, explicitly stating she is a Web Developer with 30 years of experience; pull name/role/experience text from frontend/src/content/portfolioIdentity.ts."
+        },
+        {
+          "path": "frontend/src/pages/Contact.tsx",
+          "operation": "modify",
+          "description": "Replace placeholder contact information (email/phone/location) with Vedika Pawar contact details sourced from frontend/src/content/portfolioIdentity.ts; ensure no visible 'Alex' remains and keep existing form validation + submission flow intact."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Remove all caffeine.ai (template/platform) branding from the UI, including the footer link, while keeping a clean self-made footer line.",
+      "acceptanceCriteria": [
+        "Footer no longer contains a link to https://caffeine.ai or the text “caffeine.ai”.",
+        "The phrase “Caffeine” / “caffeine.ai” does not appear anywhere in the rendered UI (header, footer, or pages).",
+        "Footer still displays a clean, self-made style copyright line without external platform branding."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Remove the caffeine.ai link/text and replace with a simple self-made copyright line (e.g., © year Vedika Pawar. All rights reserved.) without any external platform branding."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a lightweight app-level check (development-only) to help catch accidental leftover 'caffeine'/'caffeine.ai' branding in rendered strings during manual QA, without changing routes or introducing new pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Update header brand text/logo label to Vedika Pawar’s portfolio while keeping existing navigation items and routes unchanged.",
+      "acceptanceCriteria": [
+        "Header brand text is no longer the generic “Portfolio”.",
+        "Navigation still includes Home, Education, Skills, Gallery, Contact and routes continue to work."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Update the header brand text from 'Portfolio' to 'Vedika Pawar' (or 'Vedika Pawar Portfolio') while preserving existing nav links, labels, and paths; optionally source the brand text from frontend/src/content/portfolioIdentity.ts to keep identity consistent."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Ensure the portfolio remains a simple, basic PEP Class 10-style multi-page site covering intro, education, skills, gallery, and a working contact form.",
+      "acceptanceCriteria": [
+        "Each of the five pages (Home/About, Education, Skills, Gallery, Contact) remains accessible via navigation.",
+        "The Contact form still validates required fields and submits successfully through the existing submission flow.",
+        "The overall copy and layout reads as a simple student portfolio (not a platform demo), while keeping all text in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Education.tsx",
+          "operation": "modify",
+          "description": "Adjust education page copy to be straightforward and portfolio-focused (education details clearly listed in simple English) without changing the route or removing the education section structure."
+        },
+        {
+          "path": "frontend/src/pages/Skills.tsx",
+          "operation": "modify",
+          "description": "Tweak headings/intro text (if needed) to keep the presentation simple and aligned to a student portfolio brief while keeping the existing skills list content and page route intact."
+        },
+        {
+          "path": "frontend/src/pages/Gallery.tsx",
+          "operation": "modify",
+          "description": "Ensure the gallery page reads as a simple image gallery section (basic English captions); keep existing grid and image usage as-is and avoid introducing new routes/pages."
+        },
+        {
+          "path": "frontend/src/pages/Contact.tsx",
+          "operation": "modify",
+          "description": "Confirm contact form remains a working contact form: keep required-field validation and keep submission via the existing useSubmitContactForm flow; limit changes to copy/presentation only."
+        }
+      ]
+    }
+  ]
+}

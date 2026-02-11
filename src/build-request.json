@@ -1,0 +1,96 @@
+{
+  "kind": "build_request",
+  "title": "Personalize portfolio for Vedika Pawar and remove caffeine.ai branding",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Replace all placeholder identity content (e.g., “Alex Johnson”) across the portfolio website with Vedika Pawar’s portfolio identity, explicitly describing her as a Web Developer with 30 years of experience.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Listen add vedikapawar as web developer as it is her portfolio",
+          "yes name it with vedika pawar basic and simple tell experiences 30 years",
+          "yes but don't use Alex name use vedika pawar"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home/About hero heading no longer contains “Alex Johnson” and instead shows “Vedika Pawar”.",
+        "Home/About subtitle/intro text clearly states “Web Developer” and mentions “30 years of experience” in natural English.",
+        "Contact page contact info (email/phone/location) no longer uses alex.johnson@example.com or other Alex placeholders.",
+        "No page renders the name “Alex” anywhere in visible text."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Remove all template/platform branding so the site does not show “caffeine.ai” (or “Caffeine AI app”) anywhere in the UI, including the footer link.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "don't show the caffeine ai app name in last I want to show it as I make it",
+          "don't show the caffeine app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer no longer contains a link to https://caffeine.ai or the text “caffeine.ai”.",
+        "The phrase “Caffeine” / “caffeine.ai” does not appear anywhere in the rendered UI (header, footer, or pages).",
+        "Footer still displays a clean, self-made style copyright line without external platform branding."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Update the site header branding (logo/brand text) to reflect Vedika Pawar’s portfolio (e.g., “Vedika Pawar” or “Vedika Pawar Portfolio”) while keeping existing navigation items and routes unchanged.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "add vedikapawar as web developer as it is her portfolio"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header brand text is no longer the generic “Portfolio”.",
+        "Navigation still includes Home, Education, Skills, Gallery, Contact and routes continue to work."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Keep the website aligned with the PEP Class 10 project brief by ensuring the content clearly covers: introduction, education details, skills list, image gallery, and a working contact form, with a simple, basic presentation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Students will create a multi-section,multi-page personal portfolio website that includes: Introduction about themselves Education details Skills list Image gallery Contact form Styled layout using CSS"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each of the five pages (Home/About, Education, Skills, Gallery, Contact) remains accessible via navigation.",
+        "The Contact form still validates required fields and submits successfully through the existing submission flow.",
+        "The overall copy and layout reads as a simple student portfolio (not a platform demo), while keeping all text in English."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (read-only UI component sources).",
+    "Do not modify immutable hook files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Backend must remain single-actor in backend/main.mo; only introduce migration.mo if persistent state schema changes (not expected for this request)."
+  ],
+  "nonGoals": [
+    "Do not add WordPress integration or any external hosting/deployment-specific features.",
+    "Do not add third-party authentication providers beyond Internet Identity.",
+    "Do not implement admin UI for viewing contact submissions unless explicitly requested."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

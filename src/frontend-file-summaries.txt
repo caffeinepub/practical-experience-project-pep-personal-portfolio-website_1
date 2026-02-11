@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup for five pages (Home/About, Education, Skills, Gallery, Contact) wrapped in a shared layout.",
+  "frontend/src/components/SiteLayout.tsx": "Shared layout wrapper component that renders the persistent header navigation, main content area, and footer across all pages.",
+  "frontend/src/components/HeaderNav.tsx": "Responsive navigation header with Vedika Pawar's name as brand text, active link styling, mobile menu toggle, and links to all five pages.",
+  "frontend/src/components/Footer.tsx": "Simple footer component with copyright notice showing current year and Vedika Pawar's name, without any external platform branding.",
+  "frontend/src/pages/HomeAbout.tsx": "Home/About page featuring Vedika Pawar's profile with 30 years of web development experience, bio, scope of work, and call-to-action.",
+  "frontend/src/pages/Education.tsx": "Education page displaying Vedika Pawar's educational background including university degree and continuous professional development over 30 years.",
+  "frontend/src/pages/Skills.tsx": "Skills page showcasing Vedika Pawar's technical expertise with high proficiency levels reflecting 30 years of experience, plus professional skills.",
+  "frontend/src/pages/Gallery.tsx": "Gallery page with responsive grid displaying images related to Vedika Pawar's professional journey and work environment with simple descriptions.",
+  "frontend/src/pages/Contact.tsx": "Contact page with Vedika Pawar's contact information (email, phone, location) and validated contact form that submits to backend.",
+  "frontend/src/hooks/useSubmitContactForm.ts": "React Query mutation hook for submitting contact form data to the backend actor.",
+  "frontend/src/index.css": "Global styles with warm terracotta and cream OKLCH color palette for light and dark modes, avoiding blue/purple tones.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family and extended theme tokens matching the warm color palette.",
+  "frontend/src/content/portfolioIdentity.ts": "Single source of truth for portfolio identity containing Vedika Pawar's name, role (Web Developer), 30 years experience, and contact information."
+}
